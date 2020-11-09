@@ -11,7 +11,13 @@ const IndexPage = () => (
     <GlobalStyle />
     <SEO title="Home" />
     <h1>Aubrey Wodonga</h1>
-    <h2>Drag Queen. Professional Circus Artist. Twitch Streamer. Dork. 😄</h2>
+    <h2>
+      Drag Queen.
+      <br /> Professional Circus Artist.
+      <br /> Twitch Streamer.
+      <br /> Dork.
+      <br /> 😄
+    </h2>
     <p>hello@aubreywodonga.com</p>
     <Socials />
   </main>

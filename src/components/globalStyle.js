@@ -87,7 +87,10 @@ h2 {
 
 p {
   line-height: 1.2rem;
-  letter-spacing: 0.11em;}
+  letter-spacing: 0.11em;
+  text-align: center;
+  font-size: 1.2rem;
+}
 `;
 
 export default GlobalStyle;

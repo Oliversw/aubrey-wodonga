@@ -22,6 +22,7 @@ const Content = styled.section`
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
+  background-color: rgb(18, 18, 18, 0.5);
 `;
 
 const IndexPage = () => (
@@ -42,7 +43,6 @@ const IndexPage = () => (
         <p>hello@aubreywodonga.com</p>
       </div>
     </Content>
-    {/* <img src={Background} /> */}
   </Main>
 );
 

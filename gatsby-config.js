@@ -5,6 +5,18 @@ module.exports = {
     author: `@oliversw`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Aubrey Wodonga`,
+        short_name: `AubreyWodonga`,
+        start_url: `/`,
+        background_color: `#121212`,
+        theme_color: `#4EA9BD`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

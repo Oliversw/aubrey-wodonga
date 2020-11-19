@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import GlobalStyle from "../components/globalStyle";
-import Image from "../components/image";
 import SEO from "../components/seo";
 import Socials from "../components/socials";
 
@@ -15,6 +14,15 @@ const Main = styled.main`
   background-image: url(${Background});
   background-position: center;
   background-size: cover;
+
+  /* tablet + */
+  @media (min-width: 768px) {
+    background: none;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const Content = styled.section`
@@ -23,6 +31,21 @@ const Content = styled.section`
   display: flex;
   flex-flow: column nowrap;
   background-color: rgb(18, 18, 18, 0.5);
+`;
+
+const ImgContainer = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  height: 100vh;
+  width: auto;
+  max-width: 45vw;
+  overflow: hidden;
+`;
+
+const ImgStyled = styled.img`
+  height: 100%;
 `;
 
 const IndexPage = () => (
@@ -43,6 +66,9 @@ const IndexPage = () => (
         <p>hello@aubreywodonga.com</p>
       </div>
     </Content>
+    <ImgContainer>
+      <ImgStyled src={Background} />
+    </ImgContainer>
   </Main>
 );
 

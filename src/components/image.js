@@ -1,6 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import styled from "styled-components";
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -16,21 +17,28 @@ import Img from "gatsby-image"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      heroImage: file(relativePath: { eq: "aubrey-background.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
-  `)
+  `);
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>
+  if (!data?.heroImage?.childImageSharp?.fluid) {
+    return <div>Picture not found</div>;
   }
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-}
+  return (
+    <StyledImage
+      fluid={data.heroImage.childImageSharp.fluid}
+      alt="Aubrey Wodonga looking spectacular in the middle of an industrial estate"
+    />
+  );
+};
 
-export default Image
+const StyledImage = styled(Img)``;
+
+export default Image;

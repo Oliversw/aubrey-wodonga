@@ -24,9 +24,44 @@ const Email = styled.p`
   height: 1.3rem;
   margin: 1rem;
   overflow: scroll;
+  transition: 1s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (min-width: 1024px) {
     font-size: 1.6rem;
+  }
+`;
+
+const Link = styled.a`
+    color: var(--white)
+    text-decoration: none;
+`;
+
+const InstaT = styled(Instagram)`
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+const TwitchT = styled(Twitch)`
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+const TwitterT = styled(Twitter)`
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+const TiktokT = styled(Tiktok)`
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.2);
   }
 `;
 
@@ -34,12 +69,24 @@ const Socials = () => {
   return (
     <div>
       <Container>
-        <Instagram />
-        <Twitch />
-        <Twitter />
-        <Tiktok />
+        <a href="https://www.instagram.com/aubreywodonga/" target="_blank">
+          <InstaT />
+        </a>
+        <a href="https://www.twitch.tv/aubreywodonga" target="_blank">
+          <TwitchT />
+        </a>
+        <a href="https://twitter.com/AubreyWodonga" target="_blank">
+          <TwitterT />
+        </a>
+        <a href="https://www.tiktok.com/@aubreywodonga" target="_blank">
+          <TiktokT />
+        </a>
       </Container>
-      <Email>hello@aubreywodonga.com</Email>
+      <Email>
+        <Link href="mailto:hello@aubreywodonga.com" target="_blank">
+          hello@aubreywodonga.com
+        </Link>
+      </Email>
     </div>
   );
 };

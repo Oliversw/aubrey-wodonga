@@ -11,16 +11,36 @@ const Container = styled.div`
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  margin: 0 1rem;
+  max-width: 800px;
+
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+  }
+`;
+
+const Email = styled.p`
+  font-size: 1.3rem;
+  height: 1.3rem;
+  margin: 1rem;
+  overflow: scroll;
+
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Socials = () => {
   return (
-    <Container>
-      <Instagram />
-      <Twitch />
-      <Twitter />
-      <Tiktok />
-    </Container>
+    <div>
+      <Container>
+        <Instagram />
+        <Twitch />
+        <Twitter />
+        <Tiktok />
+      </Container>
+      <Email>hello@aubreywodonga.com</Email>
+    </div>
   );
 };
 

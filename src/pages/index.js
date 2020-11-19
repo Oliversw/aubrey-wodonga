@@ -7,7 +7,6 @@ import SEO from "../components/seo";
 import Socials from "../components/socials";
 
 import Background from "../images/aubrey-background.png";
-import BackgroundCrop from "../images/aubrey-background-crop.png";
 
 const Main = styled.main`
   width: 100vw;
@@ -32,6 +31,24 @@ const Content = styled.section`
   display: flex;
   flex-flow: column nowrap;
   background-color: rgb(18, 18, 18, 0.5);
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.6rem;
+      margin: 1rem 2rem;
+    }
+
+    h2 {
+      margin: 1rem 2rem;
+    }
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -62,18 +79,17 @@ const IndexPage = () => (
     <Content>
       <GlobalStyle />
       <SEO title="Home" />
-      <h1>Aubrey Wodonga</h1>
-      <h2>
-        Drag Queen.
-        <br /> Professional Circus Artist.
-        <br /> Twitch Streamer.
-        <br /> Dork.
-        <br /> 😄
-      </h2>
       <div>
-        <Socials />
-        <p>hello@aubreywodonga.com</p>
+        <h1>Aubrey Wodonga</h1>
+        <h2>
+          Drag Queen.
+          <br /> Professional Circus Artist.
+          <br /> Twitch Streamer.
+          <br /> Dork.
+          <br /> 😄
+        </h2>
       </div>
+      <Socials />
     </Content>
     <ImgContainer></ImgContainer>
   </Main>

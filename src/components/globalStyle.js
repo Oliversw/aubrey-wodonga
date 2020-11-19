@@ -78,12 +78,14 @@ h1 {
   font-size: 3rem;
   text-transform: uppercase;
   line-height: 4rem;
+  margin: 0.5rem 1rem;
 }
 
 h2 {
   font-size: 2rem;
-  line-height: 2.2rem;
-  color: var(--highlight)
+  line-height: 2.6rem;
+  color: var(--highlight);
+  margin: 0.5rem 1rem;
 }
 
 p {

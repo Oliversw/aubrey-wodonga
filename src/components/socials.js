@@ -13,9 +13,12 @@ const Container = styled.div`
   align-items: center;
   margin: 0 1rem;
   max-width: 800px;
+  overflow: scroll;
 
   @media (min-width: 1024px) {
-    margin: 0 auto;
+    margin: 1rem rem;
+
+    justify-content: flex-start;
   }
 `;
 
@@ -32,6 +35,8 @@ const Email = styled.p`
 
   @media (min-width: 1024px) {
     font-size: 1.6rem;
+    text-align: left;
+    margin: 1rem 2rem;
   }
 `;
 
@@ -45,11 +50,19 @@ const InstaT = styled(Instagram)`
   &:hover {
     transform: scale(1.2);
   }
+
+  @media (min-width: 1024px) {
+    margin: 0.5rem;
+  }
 `;
 const TwitchT = styled(Twitch)`
   transition: 0.5s;
   &:hover {
     transform: scale(1.2);
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0.5rem;
   }
 `;
 const TwitterT = styled(Twitter)`
@@ -57,11 +70,19 @@ const TwitterT = styled(Twitter)`
   &:hover {
     transform: scale(1.2);
   }
+
+  @media (min-width: 1024px) {
+    margin: 0.5rem;
+  }
 `;
 const TiktokT = styled(Tiktok)`
   transition: 0.5s;
   &:hover {
     transform: scale(1.2);
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0.5rem;
   }
 `;
 

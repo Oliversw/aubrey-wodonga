@@ -7,6 +7,7 @@ import SEO from "../components/seo";
 import Socials from "../components/socials";
 
 import Background from "../images/aubrey-background.png";
+import BackgroundCrop from "../images/aubrey-background-crop.png";
 
 const Main = styled.main`
   width: 100vw;
@@ -37,11 +38,19 @@ const ImgContainer = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
-
+  background-image: url(${Background});
+  background-position: center;
+  background-size: cover;
   height: 100vh;
-  width: auto;
-  max-width: 45vw;
+  width: 45vw;
+  min-width: 45vw;
+  max-width: 50vw;
   overflow: hidden;
+
+  @media (min-width: 1024px) {
+    width: 50vw;
+    min-width: 50vw;
+  }
 `;
 
 const ImgStyled = styled.img`
@@ -66,9 +75,7 @@ const IndexPage = () => (
         <p>hello@aubreywodonga.com</p>
       </div>
     </Content>
-    <ImgContainer>
-      <ImgStyled src={Background} />
-    </ImgContainer>
+    <ImgContainer></ImgContainer>
   </Main>
 );
 

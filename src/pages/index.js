@@ -7,19 +7,25 @@ import Image from "../components/image";
 import SEO from "../components/seo";
 import Socials from "../components/socials";
 
+import Background from "../images/aubrey-background.png";
+
+const Main = styled.main`
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${Background});
+  background-position: center;
+  background-size: cover;
+`;
+
 const Content = styled.section`
   width: 100vw;
   height: 100%;
-  min-height: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
   display: flex;
   flex-flow: column nowrap;
 `;
 
 const IndexPage = () => (
-  <main>
+  <Main>
     <Content>
       <GlobalStyle />
       <SEO title="Home" />
@@ -31,10 +37,13 @@ const IndexPage = () => (
         <br /> Dork.
         <br /> 😄
       </h2>
-      <Socials />
+      <div>
+        <Socials />
+        <p>hello@aubreywodonga.com</p>
+      </div>
     </Content>
-    <p>hello@aubreywodonga.com</p>
-  </main>
+    {/* <img src={Background} /> */}
+  </Main>
 );
 
 export default IndexPage;
